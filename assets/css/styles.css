@@ -147,7 +147,7 @@ nav .nav-link.active {
 }
 
 .hero {
-  background-image: url("/assets/images/polignano.jpg");
+  background-image: url("../images/polignano.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
