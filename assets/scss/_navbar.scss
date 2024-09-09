@@ -1,0 +1,15 @@
+nav {
+    background-color: $secondary-color;
+    
+    .nav-link {
+        color: $primary-color;
+    
+        &:hover {
+          color: $primary-color-hover;
+        }
+    
+        &.active {
+          color: $primary-color-active;
+        }
+    }
+}
