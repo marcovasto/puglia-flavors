@@ -12,9 +12,9 @@ $secondary-color: #FAF9F6;
 $secondary-color-hover: lighten($secondary-color, 10%);
 $secondary-color-active: lighten($secondary-color, 20%);
 
-$tertiary-color: #2ECC71;
-$tertiary-color-hover: lighten($tertiary-color, 10%);
-$tertiary-color-active: lighten($tertiary-color, 20%);
+$tertiary-color: #EFDE97;
+$tertiary-color-hover: darken($tertiary-color, 10%);
+$tertiary-color-active: darken($tertiary-color, 20%);
 
 // Font-weight variables
 $font-regular: 400;      // Testi standard

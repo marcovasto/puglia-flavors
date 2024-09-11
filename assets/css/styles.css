@@ -101,13 +101,13 @@ p, a, li, span {
 }
 
 a {
-  color: #2ECC71;
+  color: #EFDE97;
 }
 a:hover, a:focus {
-  color: #54d98c;
+  color: #e8d06b;
 }
 a:active {
-  color: #7ee2a8;
+  color: #e1c23f;
 }
 
 nav {
@@ -181,7 +181,69 @@ footer div {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #2ECC71;
+  color: #EFDE97;
   position: absolute;
   left: 0;
+}
+
+#contact-form {
+  background-color: #FAF9F6;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#contact-form label {
+  color: #4A4A4A;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+#contact-form input, #contact-form select, #contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #4A4A4A;
+  border-radius: 4px;
+  background-color: #FAF9F6;
+  color: #4A4A4A;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+#contact-form input:hover, #contact-form select:hover, #contact-form textarea:hover {
+  border-color: #646464;
+}
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
+  border-color: #7d7d7d;
+  background-color: white;
+}
+#contact-form textarea {
+  resize: vertical;
+}
+#contact-form .form-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  #contact-form .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#contact-form .form-action {
+  display: block;
+  margin-top: 1rem;
+}
+#contact-form .form-action button {
+  width: 100%;
+  background-color: #EFDE97;
+  color: #4A4A4A;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#contact-form .form-action button:hover {
+  background-color: #e8d06b;
+}
+#contact-form .form-action button:active {
+  background-color: #e1c23f;
 }
