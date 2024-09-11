@@ -112,6 +112,7 @@ a:active {
 
 nav {
   background-color: #FAF9F6;
+  margin-bottom: 2rem;
 }
 nav .nav-link {
   color: #4A4A4A;
@@ -130,7 +131,7 @@ nav .nav-link.active {
   --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
   display: grid;
   grid-template-columns: [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - var(--padding-inline) * 2, var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 
 .content-grid > :not(.breakout, .full-width),
@@ -161,25 +162,6 @@ footer div {
   flex-direction: column;
   text-align: center;
   border-top: 1px solid #4A4A4A;
-}
-
-.hero {
-  background-image: url("../images/polignano.webp");
-  background-color: rgba(74, 74, 74, 0.5);
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 300px;
-  align-content: center;
-  text-align: center;
-}
-.hero h1, .hero h2 {
-  color: #FAF9F6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-.hero h1 {
-  text-transform: uppercase;
 }
 
 .info-list {
