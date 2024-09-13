@@ -1,5 +1,3 @@
-//@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 //lora
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
@@ -26,11 +24,9 @@ $font-size-h1: clamp(2rem, 1.5rem + 1.5vw, 3.5rem);
 $font-size-h2: clamp(1.75rem, 1.25rem + 1.5vw, 3rem);
 $font-size-h3: clamp(1.5rem, 1.125rem + 1.2vw, 2rem);
 $font-size-h4: clamp(1.25rem, 1rem + 1vw, 1.75rem);
-$font-size-text: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+//$font-size-text: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+$font-size-text: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
 
-// Line-height variables
-$line-height-text: 1.6;
-$line-height-heading: 1.3;
 
 // Base font setup
 body {
@@ -40,22 +36,22 @@ body {
 }
 
 // Heading styles
-h1, h2, h3, h4 {
-    line-height: $line-height-heading;
-    font-weight: $font-bold; // Base weight for all headings
-}
 
 h1 {
     font-size: $font-size-h1;
+    font-weight: $font-bold;
 }
 
 h2 {
     font-size: $font-size-h2;
+    font-weight: $font-bold;
+    margin: 1.3rem 0;
 }
 
 h3 {
     font-size: $font-size-h3;
     font-weight: $font-semi-bold; // Specific weight for h3
+    margin: 1.1rem 0;
 }
 
 h4 {
@@ -63,10 +59,17 @@ h4 {
     font-weight: $font-semi-bold; // Specific weight for h4
 }
 
-// Text styles for paragraphs, links, and list items
-p, a, li, span {
+p{
     font-size: $font-size-text;
-    line-height: $line-height-text;
+    font-weight: $font-regular;
+    margin: 0.8rem 0;
+
+    transition: all 0.3s ease;
+}
+
+// Text styles for paragraphs, links, and list items
+a, li, span {
+    font-size: $font-size-text;
     font-weight: $font-regular;
 
     transition: all 0.3s ease;
@@ -83,4 +86,8 @@ a {
     &:active {
         color: $tertiary-color-active;
     }
+}
+
+img {
+    margin: 2rem 0;
 }

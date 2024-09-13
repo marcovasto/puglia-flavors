@@ -2,45 +2,17 @@
 @import "config";
 @import "navbar";
 
-// div {
-//     border: 1px solid red;
-// }
+// complete page layout
 
-// alternative to container
-
-.content-grid {
-    --padding-inline: 1rem;
-    --content-max-width: 95ch;
-    --breakout-max-width: 115ch;
-
-    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-
-    display: grid;
-    grid-template-columns: 
-        [full-width-start] minmax(var(--padding-inline), 1fr) 
-        [breakout-start] minmax(0, var(--breakout-size))
-        [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end]
-        minmax(0, var(--breakout-size)) [breakout-end]
-        minmax(var(--padding-inline), 1fr) [full-width-end];
-
-    row-gap: 1rem;
+.full-width {
+    width: 100%;
 }
-
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width) {
-  grid-column: content;
-}
-
-.content-grid > .breakout {
-    grid-column: breakout;
-}
-
-.content-grid > .full-width {
-    grid-column: full-width;
   
-    display: grid;
-    grid-template-columns: inherit;
-}
+.inner-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}  
 
 // generic css
 
@@ -59,53 +31,6 @@ footer {
         text-align: center;
 
         border-top: 1px solid $primary-color;
-    }
-}
-
-// specific css
-  
-// .hero {
-//     background-image: url("../images/polignano.webp");
-//     background-color: rgba($primary-color, 0.5);
-//     background-blend-mode: multiply;
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     min-height: 300px;
-
-//     align-content: center;
-//     text-align: center;
-    
-//     h1, h2 {
-//         color: $secondary-color;
-//         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-//     }
-
-//     h1 {
-//         text-transform: uppercase;
-//     }
-// }
-
-.info-list {
-    display: grid;
-    gap: 0.5rem;
-
-    @media (min-width: 576px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    li {
-        position: relative;
-        padding-left: 1.5em;
-
-        &::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: $tertiary-color;
-            position: absolute;
-            left: 0;
-        }
     }
 }
 
@@ -151,7 +76,6 @@ footer {
         display: grid;
         gap: 1rem;
         
-        // Griglia a due colonne attiva a partire dal breakpoint 576px
         @media (min-width: 992px) {
             grid-template-columns: 1fr 1fr;
         }
@@ -181,4 +105,35 @@ footer {
             }
         }
     }
+}
+
+// line breaker
+
+.icon-row {
+    display: flex;
+    justify-content: space-around; /* Spaziatura uniforme tra le icone */
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+.icon-row::before {
+    content: '';
+    position: absolute;
+    bottom: 50%; /* Posiziona la linea a metà altezza */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #333; /* Colore della linea */
+    z-index: 0;
+}
+  
+.icon {
+    font-size: 1.2rem;
+    color: $tertiary-color;
+    background-color: $secondary-color;
+    position: relative;
+    z-index: 1; /* Porta le icone sopra la linea */
+    padding: 0 15px; /* Aggiunge spazio attorno alle icone */
 }
