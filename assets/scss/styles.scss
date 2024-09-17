@@ -148,3 +148,27 @@ footer {
     z-index: 1; /* Porta le icone sopra la linea */
     padding: 0 15px; /* Aggiunge spazio attorno alle icone */
 }
+
+// review
+
+.review-rating {
+    display: flex;
+    align-items: center;
+
+    >:first-child {
+        padding-right: 1rem; 
+    }
+}
+
+.review-info {
+
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+    }
+    
+
+    >:first-child {
+        padding-right: 1rem; 
+    }
+}
